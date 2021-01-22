@@ -12,7 +12,7 @@ public class SubsetSumproblem {
 			for(int j=1;j<=sum;j++)
 			{
 				if(j<l[i-1])
-					b[i][j]=b[i-1][j];
+					b[i][j]=false;
 				else
 					b[i][j]=((b[i-1][j])||b[i-1][j-(l[i-1])]);
 			}

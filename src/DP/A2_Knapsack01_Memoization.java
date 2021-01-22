@@ -8,7 +8,7 @@ public class A2_Knapsack01_Memoization {
 public static int knapsack(int w[],int val[],int W,int n)
 {
 	String key=W+"|"+n;
-	if(n<0||W==0)
+	if(W==0||n<0)
 		return 0;
 
 	if(!a.containsKey(key))
@@ -29,8 +29,8 @@ public static int knapsack(int w[],int val[],int W,int n)
 		int val[]= {20,5,10,40,15,25};
 		int w[]= {1,2,3,8,7,4};
 	
-		int W=10;
-		HashMap<String,Integer> a=new HashMap<String,Integer>();
+		int W=5;
+		
 		System.out.println(knapsack(w,val,W,val.length-1));
 	}
 
