@@ -21,8 +21,8 @@ public class numberofpossiblepathongridmemoaization {
 	}
 		public static void main(String p[])
 		{
-			int m=30;
-			int n=250;
+			int m=17;
+			int n=17;
 			System.out.println(paths(m,n));
 		}
 	}

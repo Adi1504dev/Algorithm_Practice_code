@@ -11,7 +11,9 @@ public static int[] lis(int a[])
 	{
 		for(int j=0;j<i;j++)
 		{
-			if ( a[i] > a[j] && ret[i] <=ret[j] ) 
+			if ( a[i] < a[j] && ret[i] <=ret[j] ) //second condition is only to define the longest subsequence.If we 
+				//remove it we will only get total number of increasing subsequence
+				//first condition is for increasing order
 				ret[i] = ret[j] + 1; 
 		}
 	}
@@ -21,7 +23,7 @@ public static int[] lis(int a[])
 }
 	public static void main(String []args)
 {
-	int[] a= { 10, 22, 9, 33, 21, 50, 41, 60 };
+	int[] a= { 5,8,7,1,9 };
 for(int i=0;i<a.length;i++)
 {
 	System.out.println(lis(a)[i]);

@@ -4,7 +4,7 @@ public class CoinChangeTabular {
 	
 	public static int[][] kanpsack_unbound(int W,int[] val)
 	{
-		int [][] ret =new int [val.length+1][W+1];
+		int [][] ret =new int[val.length+1][W+1];
 		for(int i=0;i<=val.length;i++)
 		{
 			for(int j=0;j<=W;j++)
@@ -21,9 +21,9 @@ public class CoinChangeTabular {
 		
 			}
 		}
-		return ret;
-			
+		return ret;		
 	}
+	
 	
 public static void main (String p[])
 {
