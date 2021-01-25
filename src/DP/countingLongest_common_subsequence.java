@@ -36,19 +36,18 @@ public static int[][] count_sequence_length(String x,String y)
 	int [][] k=new int [x.length()+1][y.length()+1];
 	
 	
-	
-	for (int i=0;i<=x.length();i++)
+	for(int i=0;i<=x.length();i++)
 	{
-		for (int j=0;j<=y.length();j++)
+		for(int j=0;j<=y.length();j++)
 		{
 			if(i==0||j==0)
 				k[i][j]=0;
 			else if(x.charAt(i-1)==y.charAt(j-1))
 				k[i][j]=1+k[i-1][j-1];
-			
-			
 			else
 				k[i][j]=Math.max(k[i-1][j],k[i][j-1]);
+			
+				
 		}
 	}
 	
@@ -57,8 +56,8 @@ return k;
 }
 public static void main(String args[])
 {
-	String X= "ABAB";
-	String Y="BABA";
+	String X= "ABABccV";
+	String Y="ABAVBV";
 	int max=0;
 	int row=0,col=0;
 	int k[][]=count_sequence_length(X,Y);
@@ -79,12 +78,12 @@ public static void main(String args[])
 		}
 	System.out.println("Max Length->"+max+"\trow=>"+row+", col=>"+col);
 	
-	ArrayList<String> m=new ArrayList<String>();
+	/*ArrayList<String> m=new ArrayList<String>();
 	for(int i=0;i<=X.length();i++)
 	{
 		for(int j=0;j<=Y.length();j++)
 		{
-			if( k[i][j]==1)
+			if( k[i][j]==3)
 			{
 				m.add(commonsequence(k,X,Y,i,j));
 			}
@@ -92,7 +91,7 @@ public static void main(String args[])
 	}
 	for(String t:m)
 		System.out.println(t);
-	
+	*/
 		}
 }
 

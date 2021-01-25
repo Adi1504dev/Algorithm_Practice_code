@@ -6,7 +6,7 @@ public class A1_Fabbonaci {
 public static ArrayList<Integer> Fabbonaci(int n,ArrayList<Integer> a)
 {
 	if (n<2)
-		return a;
+		return a; 
 	
 	for(int i=2;i<n;i++)
 	{

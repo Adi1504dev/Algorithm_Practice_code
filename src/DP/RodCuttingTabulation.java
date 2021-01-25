@@ -6,7 +6,7 @@ public static int [][] kapsack_unound(int W,int w[],int val[])
 	int [][] ret=new int[val.length+1][W+1];
 	for(int i=0;i<=val.length;i++)
 	{
-		for(int j=0;j<=W;j++)
+		for(int j=0;j<=W;j++) 
 		{
 			if(i==0||j==0)
 				ret[i][j]=0;

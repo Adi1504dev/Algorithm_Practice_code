@@ -7,15 +7,14 @@ public class RodCuttingMomoization {
 	public static int knapsack_unbound(int W,int val[],int w[],int n)
 	{
 		String key=W+"|"+n;
-		if(n<0|W==0)
+		if(W==0 || n<0)
 			return 0;
 		if(!lookup.containsKey(key))
 		{
 			if(W<w[n])
 				lookup.put(key, knapsack_unbound(W,val,w,n-1));
 			else
-				lookup.put(key, Math.max(knapsack_unbound(W,val,w,n-1), val[n]+knapsack_unbound(W-w[n],val,w,n)));
-				
+				lookup.put(key,Math.max(knapsack_unbound(W-w[n],val,w,n)+val[n], knapsack_unbound(W,val,w,n-1)));
 		}
 		return lookup.get(key);
 	}

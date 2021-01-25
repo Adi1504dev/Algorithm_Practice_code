@@ -16,4 +16,4 @@ public class binary {
 		System.out.println(binary(7));
 	}
 
-}
+} 

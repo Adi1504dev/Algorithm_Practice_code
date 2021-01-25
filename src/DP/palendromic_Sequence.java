@@ -12,7 +12,7 @@ public class palendromic_Sequence{
 			{
 				ret=X.charAt(i-1)+ret;
 				i=i-1;
-				j=j-1;
+				j=j-1 ;
 			}
 			else
 			{

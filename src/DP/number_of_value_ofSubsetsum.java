@@ -15,7 +15,7 @@ public static int[][] subsets(int[] l,int sum)
 				b[i][j]=b[i-1][j];
 			else
 				b[i][j]=b[i-1][j]+b[i-1][j-l[i-1]];
-		}
+		} 
 		}
 	return b;
 }

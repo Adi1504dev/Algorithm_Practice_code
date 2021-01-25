@@ -17,3 +17,4 @@ public class BlocksinTriangle {
 		System.out.println(new BlocksinTriangle().triangle(2));
 	}
 }
+ 

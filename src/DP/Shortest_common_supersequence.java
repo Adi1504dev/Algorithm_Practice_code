@@ -15,7 +15,7 @@ public static int[][] count_sequence_length(String X,String Y)
 	    {
 	        for (int j = 0; j <= Y.length(); j++)
 	        {
-	            if(j==0)
+	            if(j==0) 
 	            	lookup[i][j]=i;
 	            else if(i==0)
 	            	lookup[i][j]=j;

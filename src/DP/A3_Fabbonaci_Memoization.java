@@ -3,6 +3,7 @@ package DP;
 import java.util.HashMap;
 
 public class A3_Fabbonaci_Memoization {
+	HashMap<String,Integer> m=new HashMap<String,Integer>();
 	public static int fabbo(int n,HashMap<String,Integer> a)
 	{
 		String key=n+"";
@@ -10,7 +11,7 @@ public class A3_Fabbonaci_Memoization {
 			return 1;
 		if(!a.containsKey(key))
 		{
-			a.put(key,fabbo(n-1,a)+fabbo(n-2,a));
+			a.put(key,fabbo(n-1,a)+fabbo(n-2,a)); 
 		}
 		else
 			System.out.println("dada");
@@ -18,7 +19,7 @@ public class A3_Fabbonaci_Memoization {
 		}
 	public static void main(String []args)
 {
-		int n=30;
+		int n=3;
 		HashMap<String,Integer> a=new HashMap<String,Integer>();
 		a.put("0", 0);
 		a.put("1", 1);

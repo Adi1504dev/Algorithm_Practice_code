@@ -41,7 +41,7 @@ public class Counting_Longest_common_Substring {
 				{
 					if(X.charAt(i-1)==Y.charAt(j-1))
 					{
-						k[i][j]=k[i-1][j-1]+1;
+						k[i][j]=k[i-1][j-1]+1; 
 					}
 					else
 						k[i][j]=0;

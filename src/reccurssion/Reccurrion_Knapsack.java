@@ -27,3 +27,4 @@ public static void main(String args[])
 	System.out.println(knapsack(w,val,W,val.length-1));
 }
 }
+ 

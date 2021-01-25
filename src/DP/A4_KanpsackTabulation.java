@@ -9,7 +9,7 @@ public static int[][] knapSack(int W,int w[],int val[])
 	{
 		for(int j=0;j<=W;j++)
 		{
-			if(j==0||i==0)
+			if(j==0||i<=0) 
 				ret[i][j]=0;
 			else if(w[i-1]>j)
 				ret[i][j]=ret[i-1][j];

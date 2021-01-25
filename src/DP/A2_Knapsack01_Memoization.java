@@ -4,25 +4,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class A2_Knapsack01_Memoization {
-	private static HashMap<String, Integer> a = new HashMap<>();
-public static int knapsack(int w[],int val[],int W,int n)
+	private static HashMap<String, Integer> a = new HashMap<String,Integer>();
+public static int kanpsack01(int val[],int w[],int W,int n)
+{String key=W+"|"+n;
+if(W==0||n<=0)
+	return 0;
+if(!a.containsKey(key)) 
 {
-	String key=W+"|"+n;
-	if(W==0||n<0)
-		return 0;
-
-	if(!a.containsKey(key))
-	{
-		if(W<w[n])
-			a.put(key,knapsack(w,val,W,n-1));
-		else
-			
-			a.put(key,  Math.max(knapsack(w,val,W-w[n],n-1)+val[n],knapsack(w,val,W,n-1)));
-		//keep in mind to use n-1 and not val[n] as array starts from 0
-		//so if you will use n then you will miss one item
-		//or in base condition set n<0
-	}
-	return a.get(key);
+if(W<w[n-1])
+	a.put(key, kanpsack01(val,w,W,n-1));
+else
+	a.put(key, Math.max(val[n-1]+kanpsack01(val, w,W-w[n-1],n-1),kanpsack01(val, w,W,n-1)));
+}
+return a.get(key);
 }
 	
 	public static void main(String[] args) {
@@ -30,8 +24,9 @@ public static int knapsack(int w[],int val[],int W,int n)
 		int w[]= {1,2,3,8,7,4};
 	
 		int W=5;
+		System.out.println(kanpsack01(val,w,W,val.length));
 		
-		System.out.println(knapsack(w,val,W,val.length-1));
+	
 	}
 
 }

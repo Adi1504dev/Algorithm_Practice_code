@@ -18,7 +18,7 @@ public static int[] lis(int a[])
 		}
 	}
 	
-	
+	 
 	return ret;
 }
 	public static void main(String []args)

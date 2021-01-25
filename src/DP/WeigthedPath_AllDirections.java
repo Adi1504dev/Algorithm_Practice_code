@@ -5,17 +5,17 @@ public class WeigthedPath_AllDirections {
 	public static int max_weighted_Path(int a[][],int i,int j)
 	{
 		String key=i+"|"+j;
-		if(i==0 && j==0)
-		return a[0][0];
-		if(!m.containsKey(key))
-		{
-			if(i==0)
-				m.put(key,max_weighted_Path(a,i,j-1)+ a[i][j]);
-			else if(j==0)
-				m.put(key,max_weighted_Path(a,i-1,j)+ a[i][j]);
-			else
-			m.put(key, a[i][j]+Math.max(max_weighted_Path(a,i-1,j-1),Math.max(max_weighted_Path(a,i-1,j), max_weighted_Path(a,i,j-1))));
-		}
+		if(i==0 && j==0) 
+			return a[i][j];
+			if(!m.containsKey(key))
+			{
+				if(i==0)
+					m.put(key,max_weighted_Path(a,i,j-1)+a[i][j] );
+				else if(j==0)
+					m.put(key,max_weighted_Path(a,i-1,j)+a[i][j] );	
+				else
+					m.put(key,a[i][j]+(Math.max(max_weighted_Path(a,i-1,j-1),Math.max(max_weighted_Path(a,i,j-1),max_weighted_Path(a,i-1,j))))) ;
+			}
 		return m.get(key);
 	}
 public static void main(String []args)

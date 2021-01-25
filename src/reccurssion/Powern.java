@@ -11,3 +11,4 @@ public class Powern {
 		System.out.println((new Powern()).powerN(2, 3));
 	}
 }
+ 

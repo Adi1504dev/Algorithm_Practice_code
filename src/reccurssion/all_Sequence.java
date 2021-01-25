@@ -12,15 +12,17 @@ public class all_Sequence{
 		else
 		{
 			allSeq(m.substring(1),l+m.charAt(0));
-			allSeq(m.substring(1),l);
+			allSeq(m.substring(1),l);	
+				
+			}
 			
-		}
-		}
+		} 
+		
 	public static void main(String args[])
 	{
-		String m="abcd";
+		String m="abc";
 		allSeq(m,"");
-		System.out.println(m.substring(1));
+
 		System.out.println(k);
 	}
 }

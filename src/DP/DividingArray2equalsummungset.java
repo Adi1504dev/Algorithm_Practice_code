@@ -28,6 +28,7 @@ public class DividingArray2equalsummungset {
 	for(int i=0;i<=l.length;i++)
 		{for(int j=0;j<=sum;j++)
 		{
+			
 		System.out.print(k[i][j]+"\t");	
 		}
 		System.out.println();
@@ -39,9 +40,8 @@ public class DividingArray2equalsummungset {
 public static void main(String args[])
 {
 	int[] l= {1,5,11,5};
-	int sum=0;
-	for(int t:l)//sum should be half (then problem becomes subset sum problem)
-		sum=sum+t;
+	int sum=16;
+	
 		
 	boolean k=divde_array(l,sum);
 	

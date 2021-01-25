@@ -16,7 +16,7 @@ public static void main(String agr[])
 	item[] i=new item[3];
 	i[0]=new item(20,100);
 	i[1]=new item(10,60);
-	i[2]=new item(30,120);
+	i[2]=new item(30,120); 
 	double W=50;
 	double profit=0;
 	item temp=null;

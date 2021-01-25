@@ -28,3 +28,4 @@ public class Encryption {
 			System.out.println(encryption(test));
 		}
 }
+ 

@@ -16,7 +16,7 @@ public class Changextoy {
 	}
 	
 	public static void main(String args[])
-	{
+	{ 
 		String a="xhixhix";
 		System.out.println((new Changextoy()).changeXY(a));
 				
