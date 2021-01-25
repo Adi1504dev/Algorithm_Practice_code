@@ -84,7 +84,7 @@ public static void main(String args[])
 	{
 		for(int j=0;j<=Y.length();j++)
 		{
-			if(k[i][j]==1)
+			if( k[i][j]==1)
 			{
 				m.add(commonsequence(k,X,Y,i,j));
 			}
