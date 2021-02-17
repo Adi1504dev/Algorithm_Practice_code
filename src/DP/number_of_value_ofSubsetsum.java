@@ -21,8 +21,8 @@ public static int[][] subsets(int[] l,int sum)
 }
 	public static void main(String p[])
 {
-		int[] l= {1,2,1};
-		int sum=3;
+		int[] l= {2,3,2,1,1};
+		int sum=6;
 		int k[][]=subsets(l,sum);
 		
 		for(int i=0;i<=l.length;i++)

@@ -7,13 +7,13 @@ public class numberofpossiblepathongridmemoaization {
 	public static int paths(int i,int j)
 	{
 		String key=i+"|"+j;
-		if(i==1&&j==1)
+		if(i==0&&j==0)
 		 return 1;
 		if(!m.containsKey(key))
 		{
-			if(i==1)
+			if(i==0)
 				m.put(key,paths(i,j-1));
-			else if(j==1)
+			else if(j==0)
 				m.put(key,paths(i-1,j));
 			else
 		m.put(key,paths(i-1,j)+paths(i,j-1));	
@@ -28,7 +28,7 @@ public class numberofpossiblepathongridmemoaization {
 		{
 			int m=2;
 			int n=3;
-			System.out.println(paths(m,n));
+			System.out.println(paths(m-1,n-1));
 		}
 	}
 
